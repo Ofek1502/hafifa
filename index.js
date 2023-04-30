@@ -9,6 +9,7 @@ morgan.token("body", (req, res) => {
 
 const app = express();
 const port = 3000;
+app.use(express.static('dist'))
 app.use(express.json());
 app.use(cors())
 app.use(morgan(":method :url :status :res[content-length] - :response-time ms :body"));
